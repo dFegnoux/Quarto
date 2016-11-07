@@ -1,0 +1,88 @@
+table,
+td {
+  border: 1px solid black; 
+  border-collapse: collapse;
+}
+
+table {
+  position: relative;
+  margin: auto;
+  border-width: 3px;
+  width: 500px;
+  height: 500px;
+}
+
+td {
+  position: relative;
+  width: 25%;
+  height: 25px;
+  padding: 2px;
+}
+
+.piece {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.pieces-container {
+  margin: 20px auto 0;
+  width: 432px;
+}
+
+.pieces-container .piece {
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: none;
+  float: left;
+  margin: 1px;
+  border: 1px solid transparent;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.pieces-container .small {
+  width: 25px;
+  height: 25px;
+}
+
+.pieces-container .piece:hover {
+  border: 1px solid black;
+}
+
+.piece,
+.pierced::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Pieces states */
+.red {
+  background: pink;
+}
+
+.blue {
+  background: lightblue;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+.small {
+  width: 50%;
+  height: 50%;
+}
+
+.pierced::after {
+  display: block;
+  background: black;
+  border-radius: 50%;
+  width: 50%;
+  height: 50%;
+  content:'';
+}
