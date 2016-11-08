@@ -1,3 +1,48 @@
+body {
+  margin: 0;
+}
+
+.overlay {
+  position: fixed;
+  opacity: .5;
+  height: 100%;
+  width: 100%;
+  background: black;
+  z-index: 10;
+  transition: opacity .5s;
+}
+
+.overlay.hidden,
+.menu.hidden {
+  opacity: 0;
+  z-index: -1;
+}
+
+.menu {
+  opacity: 1;
+  transition: opacity .5s;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 15;
+}
+
+.menu button {
+  display: inline-block;
+  border: none;
+  background: lightblue;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  transition: background .5s;
+}
+
+button:hover {
+  cursor: pointer;
+  background: white;
+}
+
 table,
 td {
   border: 1px solid black; 
